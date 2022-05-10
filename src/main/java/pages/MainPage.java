@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends AbstractPage {
     private final String PAGE_URL = "https://trello.com/userbedc9748f889f7b0630c2ac1d342812d/boards";
@@ -14,6 +15,7 @@ public class MainPage extends AbstractPage {
 
     public MainPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(this.driver, this);
     }
 
     @Override
