@@ -15,6 +15,7 @@ public class Constants {
     @BeforeMethod()
     public void setup(){
         driver = DriverSingleton.getDriver();
+        driver.get(MAIN_URL);
     }
     @AfterMethod(alwaysRun = true)
     public void stopBrowser()

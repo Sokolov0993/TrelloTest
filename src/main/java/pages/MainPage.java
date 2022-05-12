@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends AbstractPage {
     private final String PAGE_URL = "https://trello.com/userbedc9748f889f7b0630c2ac1d342812d/boards";
-    private final Logger logger = LogManager.getRootLogger();
-    @FindBy(id = "//div[@id='header']")
+    private final Logger logger = LogManager.getLogger(MainPage.class);
+    @FindBy(id = "header")
     private WebElement header;
 
     public MainPage(WebDriver driver) {
@@ -19,7 +19,7 @@ public class MainPage extends AbstractPage {
     }
 
     @Override
-    protected MainPage openPage() {
+    public MainPage openPage() {
         driver.navigate().to(PAGE_URL);
         logger.info("main page was opened");
         return this;
