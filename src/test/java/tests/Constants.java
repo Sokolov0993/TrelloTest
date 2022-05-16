@@ -18,7 +18,7 @@ public class Constants {
     public void setup() throws InterruptedException {
         driver = DriverSingleton.getDriver();
         driver.get(MAIN_URL);
-        LogInPage logInPage = new LogInPage(driver);
+        LogInPage logInPage = new LogInPage();
         logInPage.login(new User());
 
     }

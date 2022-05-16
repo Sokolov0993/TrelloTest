@@ -14,8 +14,8 @@ import java.time.Duration;
 public class CreatingBoardTest extends Constants {
     @Test
     public void CreatingNewBoardTest() throws InterruptedException {
-        MainPage testMainPage = new MainPage(driver);
-        BoardPage testBoardPage = new BoardPage(driver);
+        MainPage testMainPage = new MainPage();
+        BoardPage testBoardPage = new BoardPage();
         Assert.assertTrue(testMainPage.createBoard("new board").getAddListButton().isDisplayed(), "Board is not created");
         testMainPage.openPage();
         testBoardPage.deleteBoard("new board");

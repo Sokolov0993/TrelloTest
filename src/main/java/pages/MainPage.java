@@ -18,10 +18,6 @@ public class MainPage extends AbstractPage {
     private WebButton confirmCreatingButton = new WebButton("//button[text()='Create']");
 
 
-    public MainPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(super.driver, this);
-    }
 
     @Override
     public MainPage openPage() {
@@ -40,7 +36,7 @@ public class MainPage extends AbstractPage {
         WebElement nameOfBoardField = driver.findElement(By.xpath("/html/body/div[3]/div/section/div/form/div[1]/label/input"));
         nameOfBoardField.sendKeys(nameOfBoard);
         confirmCreatingButton.click();
-        return new BoardPage(driver);
+        return new BoardPage();
     }
 }
 

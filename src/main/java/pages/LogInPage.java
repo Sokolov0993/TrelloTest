@@ -32,10 +32,7 @@ public class LogInPage extends AbstractPage {
         return googleButton;
     }
 
-    public LogInPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(super.driver, this);
-    }
+
 
     @Override
     public LogInPage openPage() {
@@ -50,6 +47,6 @@ public class LogInPage extends AbstractPage {
         logInButton.click();
         logger.info("User " + user.getEMAIL() + " has logged ");
 
-        return new MainPage(driver);
+        return new MainPage();
     }
 }

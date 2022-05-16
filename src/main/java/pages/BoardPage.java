@@ -16,10 +16,6 @@ public class BoardPage extends AbstractPage{
     private WebButton deleteBoardButton = new WebButton("//button[@class='_3ZZkvSn-U9BxDK _3TTqkG5muwOzqZ _1Tu9wiuW4Te8Rx']");
     private WebButton confirmDeleteBoardButton = new WebButton("//button[text()='Delete']");
 
-    public BoardPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(super.driver, this);
-    }
 
     public WebButton getAddListButton() {
         return addListButton;
@@ -39,6 +35,6 @@ public MainPage deleteBoard(String boardName){
        submitClosingBoard.click();
        deleteBoardButton.click();
        confirmDeleteBoardButton.click();
-        return new MainPage(driver);
+        return new MainPage();
 }
 }

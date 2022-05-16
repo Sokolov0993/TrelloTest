@@ -13,7 +13,7 @@ import java.time.Duration;
 public class LogInTest extends Constants {
     @Test
     public void LogInAbility() throws InterruptedException {
-        LogInPage testLoginPage = new LogInPage(driver);
+        LogInPage testLoginPage = new LogInPage();
         testLoginPage.login(new User());
         Assert.assertTrue(testLoginPage.getInputPassword().isEnabled(), "User logged successfully");
     }

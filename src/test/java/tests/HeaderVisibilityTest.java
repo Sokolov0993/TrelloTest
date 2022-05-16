@@ -10,7 +10,7 @@ import java.time.Duration;
 public class HeaderVisibilityTest extends Constants {
       @Test
       public void IsHeaderVisibleTest() throws InterruptedException {
-          MainPage testMainPage = new MainPage(driver);
+          MainPage testMainPage = new MainPage();
           Assert.assertTrue(testMainPage.IsHeaderVisible(), "Метод работает верно");
 
       }
