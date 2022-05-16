@@ -1,4 +1,4 @@
-package webElementFactory;
+package webelementfactory;
 
 public class WebButton extends AbstractWebElement{
     public WebButton(String xpath) {

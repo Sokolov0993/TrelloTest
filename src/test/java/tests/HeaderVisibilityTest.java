@@ -2,16 +2,13 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.LogInPage;
 import pages.MainPage;
 
-import java.time.Duration;
-
-public class HeaderVisibilityTest extends Constants {
+public class HeaderVisibilityTest extends BaseTest {
       @Test
       public void IsHeaderVisibleTest() throws InterruptedException {
           MainPage testMainPage = new MainPage();
-          Assert.assertTrue(testMainPage.IsHeaderVisible(), "Метод работает верно");
+          Assert.assertTrue(testMainPage.isHeaderVisible(), "Метод работает верно");
 
       }
   }

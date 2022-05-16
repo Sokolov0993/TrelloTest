@@ -1,7 +1,7 @@
 package pages;
 
 import driver.DriverSingleton;
-import elementFactory.ExtendedFieldDecorator;
+import elementfactory.ExtendedFieldDecorator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 

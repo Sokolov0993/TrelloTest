@@ -1,6 +1,7 @@
-package webElementFactory;
+package webelementfactory;
 
 import driver.DriverSingleton;
+import elementfactory.Element;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -8,8 +9,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public abstract class AbstractWebElement implements Element {
     private String xpath;
@@ -51,15 +50,15 @@ public abstract class AbstractWebElement implements Element {
     }
 
     public void waitToBeClickable() {
-        new WebDriverWait(DriverSingleton.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(getElement()));
+        new WebDriverWait(DriverSingleton.getDriver(), 10).until(ExpectedConditions.elementToBeClickable(getElement()));
     }
 
     public void waitForPresenceOfElement() {
-        new WebDriverWait(DriverSingleton.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+        new WebDriverWait(DriverSingleton.getDriver(), 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
     }
 
     public void waitForVisibilityOf() {
-        new WebDriverWait(DriverSingleton.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(getElement()));
+        new WebDriverWait(DriverSingleton.getDriver(), 10).until(ExpectedConditions.visibilityOf(getElement()));
     }
 
     protected String getClassName() {

@@ -1,4 +1,4 @@
-package webElementFactory;
+package webelementfactory;
 
 import driver.DriverSingleton;
 import org.apache.log4j.LogManager;

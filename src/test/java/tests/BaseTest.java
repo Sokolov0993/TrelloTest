@@ -7,7 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.LogInPage;
 
-public class Constants {
+public class BaseTest {
 
     public static String MAIN_URL = "https://trello.com/login";
 

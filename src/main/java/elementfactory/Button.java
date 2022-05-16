@@ -1,4 +1,4 @@
-package elementFactory;
+package elementfactory;
 
 import org.openqa.selenium.WebElement;
 

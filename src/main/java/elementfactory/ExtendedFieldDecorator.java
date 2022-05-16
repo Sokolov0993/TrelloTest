@@ -1,4 +1,4 @@
-package elementFactory;
+package elementfactory;
 
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -31,11 +31,10 @@ public class ExtendedFieldDecorator extends DefaultFieldDecorator {
 
     private Object decorateElement(final ClassLoader loader, final Field field) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, ClassNotFoundException {
         final WebElement wrappedElement = proxyForLocator(loader, createLocator(field));
-        return elementFactory.create((Class<? extends webElementFactory.Element>) field.getType(), wrappedElement);
+        return elementFactory.create((Class<? extends Element>) field.getType(), wrappedElement);
     }
 
     private ElementLocator createLocator(final Field field) {
         return factory.createLocator(field);
     }
 }
-
