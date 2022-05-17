@@ -7,9 +7,7 @@ import pages.MainPage;
 
 public class BoardRemovalTest extends BaseTest {
     @Test
-    public void LogInAbility() throws InterruptedException {
-        BoardPage testBoardPage = new BoardPage();
-        MainPage testMainPage = new MainPage();
+    public void BoardRemovalTest() throws InterruptedException {
         int boardsAmountBeforeRemoval= testMainPage.getCurrentListOfBoards().size();
         testBoardPage.deleteBoard("new board");
         int boardsAmountAfterRemoval= testMainPage.getCurrentListOfBoards().size();

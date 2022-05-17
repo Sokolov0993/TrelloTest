@@ -6,8 +6,7 @@ import pages.LogInPage;
 
 public class LogInTest extends BaseTest {
     @Test
-    public void LogInAbility() throws InterruptedException {
-        LogInPage testLoginPage = new LogInPage();
+    public void LogInTest() throws InterruptedException {
         testLoginPage.login(new User());
         Assert.assertTrue(testLoginPage.getInputPassword().isDisplayed(), "User logging failed");
     }
